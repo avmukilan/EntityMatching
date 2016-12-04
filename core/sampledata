@@ -1,0 +1,117 @@
+<p>There  are 10 questions in this HIT. For each question, determine if the two restaurants  match (ARE THE SAME) or do not match  (ARE DIFFERENT).</p>
+<p>&nbsp;</p>
+<p><b>PLEASE READ THE GUIDELINES BELOW BEFORE ADVANCING.</b></p>
+<p>You will see two restaurants records. Determine whether the two records represent the same restaurant or not. For each song,  you will see the following attributes:</p>
+<ul>
+    <li>id</li>
+    <li>Name</li>
+    <li>Address</li>
+    <li>City</li>
+    <li>Phone</li>
+    <li>Type</li>
+    <li>Class</li>
+</ul>
+<p>Some of the attributes may be missing for some of the restaurants, try to make a choice based on the information available. <br />
+If you are really confused whether the two restaurants are the same or not, you may choose the third option &quot;<i>Can not tell</i>&quot;</p>
+<h3>HOW TO DECIDE WHETHER &quot;RESTAURANT 1&quot; AND &quot;RESTAURANT 2&quot; ARE THE SAME</h3>
+<ul>
+    <li>The restaurant name, address and phone are the most helpful attributes in deciding whether the two restaurants are same. The restaurant name will never be missing.</li>
+</ul>
+<ul>
+    <li>Some restaurants may have multiple chains with different address. For example,
+    <table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>123</td>
+            <td>965</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Maharani Indian</td>
+            <td>Maharani Indian</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>520 W Washington Ave</td>
+            <td>1210 W Dayton Ave</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>Madison</td>
+            <td>Madison</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>608-123-1234</td>
+            <td>608-123-1234</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>asian</td>
+            <td>asian</td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td>1234</td>
+            <td>1234</td>
+        </tr>
+    </tbody>
+    </table>
+    These two restaurants <b>ARE THE SAME</b> even though they have different addresses.</li>
+</ul>
+<ul>
+    <li>Different address, city and phone number but same restaurant name are <b>DIFFERENT</b>. For example,
+    <table cellspacing="4" cellpadding="2" border="1">
+	    <tbody>
+	        <tr>
+	            <td>&nbsp;</td>
+	            <td>Restaurant 1</td>
+	            <td>Restaurant 2</td>
+	        </tr>
+		<tr>
+		    <td>Id</td>
+            	    <td>513</td>
+            	    <td>345</td>
+        	</tr>
+	        <tr>
+	            <td>Name</td>
+	            <td>Maharani Indian</td>
+	            <td>Maharani Indian</td>
+	        </tr>
+	        <tr>
+	            <td>Address</td>
+	            <td>520 W Washington Ave</td>
+	            <td>1210 W Dayton Ave</td>
+	        </tr>
+	        <tr>
+	            <td>City</td>
+	            <td>Madison</td>
+	            <td>Chicago</td>
+	        </tr>
+	        <tr>
+	            <td>Phone</td>
+	            <td>608-123-1234</td>
+	            <td>312-789-1234</td>
+	        </tr>
+	        <tr>
+	            <td>Type</td>
+	            <td>asian</td>
+	            <td>asian</td>
+	        </tr>
+        	<tr>
+            	    <td>Class</td>
+            	    <td>432</td>
+            	    <td>432</td>
+        	</tr>
+	    </tbody>
+    </table>
+    These two restaurants <b>ARE DIFFERENT</b>.</li>
+</ul>
+<i><b>NOTE: We will be evaluating your performance. If the quality of work is poor we may reject your answer.</b></i>
+<h4>Please use the guidelines and your own judgement to answer ALL the questions below.</h4>

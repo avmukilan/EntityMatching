@@ -1,0 +1,786 @@
+<QuestionForm
+        xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <FormattedContent><![CDATA[
+<p>There  are 10 questions in this HIT. For each question, determine if the two restaurants  match (ARE THE SAME) or do not match  (ARE DIFFERENT).</p>
+<p>&nbsp;</p>
+<p><b>PLEASE READ THE GUIDELINES BELOW BEFORE ADVANCING.</b></p>
+<p>You will see two restaurants records. Determine whether the two records represent the same restaurant or not. For each song,  you will see the following attributes:</p>
+<ul>
+    <li>id</li>
+    <li>Name</li>
+    <li>Address</li>
+    <li>City</li>
+    <li>Phone</li>
+    <li>Type</li>
+    <li>Class</li>
+</ul>
+<p>Some of the attributes may be missing for some of the restaurants, try to make a choice based on the information available. <br />
+If you are really confused whether the two restaurants are the same or not, you may choose the third option &quot;<i>Can not tell</i>&quot;</p>
+<h3>HOW TO DECIDE WHETHER &quot;RESTAURANT 1&quot; AND &quot;RESTAURANT 2&quot; ARE THE SAME</h3>
+<ul>
+    <li>The restaurant name, address and phone are the most helpful attributes in deciding whether the two restaurants are same. The restaurant name will never be missing.</li>
+</ul>
+<ul>
+    <li>Some restaurants may have multiple chains with different address. For example,
+    <table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>123</td>
+            <td>965</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Maharani Indian</td>
+            <td>Maharani Indian</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>520 W Washington Ave</td>
+            <td>1210 W Dayton Ave</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>Madison</td>
+            <td>Madison</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>608-123-1234</td>
+            <td>608-123-1234</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>asian</td>
+            <td>asian</td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td>1234</td>
+            <td>1234</td>
+        </tr>
+    </tbody>
+    </table>
+    These two restaurants <b>ARE THE SAME</b> even though they have different addresses.</li>
+</ul>
+<ul>
+    <li>Different address, city and phone number but same restaurant name are <b>DIFFERENT</b>. For example,
+    <table cellspacing="4" cellpadding="2" border="1">
+	    <tbody>
+	        <tr>
+	            <td>&nbsp;</td>
+	            <td>Restaurant 1</td>
+	            <td>Restaurant 2</td>
+	        </tr>
+		<tr>
+		    <td>Id</td>
+            	    <td>513</td>
+            	    <td>345</td>
+        	</tr>
+	        <tr>
+	            <td>Name</td>
+	            <td>Maharani Indian</td>
+	            <td>Maharani Indian</td>
+	        </tr>
+	        <tr>
+	            <td>Address</td>
+	            <td>520 W Washington Ave</td>
+	            <td>1210 W Dayton Ave</td>
+	        </tr>
+	        <tr>
+	            <td>City</td>
+	            <td>Madison</td>
+	            <td>Chicago</td>
+	        </tr>
+	        <tr>
+	            <td>Phone</td>
+	            <td>608-123-1234</td>
+	            <td>312-789-1234</td>
+	        </tr>
+	        <tr>
+	            <td>Type</td>
+	            <td>asian</td>
+	            <td>asian</td>
+	        </tr>
+        	<tr>
+            	    <td>Class</td>
+            	    <td>432</td>
+            	    <td>432</td>
+        	</tr>
+	    </tbody>
+    </table>
+    These two restaurants <b>ARE DIFFERENT</b>.</li>
+</ul>
+<i><b>NOTE: We will be evaluating your performance. If the quality of work is poor we may reject your answer.</b></i>
+<h4>Please use the guidelines and your own judgement to answer ALL the questions below.</h4>
+    ]]></FormattedContent>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>${instanceid0}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 1</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname0}</td>
+            <td>${bname0}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress0}</td>
+            <td>${baddress0}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity0}</td>
+            <td>${bcity0}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone0}</td>
+            <td>${bphone0}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype0}</td>
+            <td>${btype0}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid1}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 2</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname1}</td>
+            <td>${bname1}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress1}</td>
+            <td>${baddress1}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity1}</td>
+            <td>${bcity1}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone1}</td>
+            <td>${bphone1}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype1}</td>
+            <td>${btype1}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid2}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 3</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname2}</td>
+            <td>${bname2}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress2}</td>
+            <td>${baddress2}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity2}</td>
+            <td>${bcity2}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone2}</td>
+            <td>${bphone2}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype2}</td>
+            <td>${btype2}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid3}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 4</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname3}</td>
+            <td>${bname3}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress3}</td>
+            <td>${baddress3}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity3}</td>
+            <td>${bcity3}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone3}</td>
+            <td>${bphone3}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype3}</td>
+            <td>${btype3}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid4}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 5</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname4}</td>
+            <td>${bname4}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress4}</td>
+            <td>${baddress4}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity4}</td>
+            <td>${bcity4}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone4}</td>
+            <td>${bphone4}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype4}</td>
+            <td>${btype4}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid5}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 6</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname5}</td>
+            <td>${bname5}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress5}</td>
+            <td>${baddress5}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity5}</td>
+            <td>${bcity5}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone5}</td>
+            <td>${bphone5}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype5}</td>
+            <td>${btype5}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid6}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 7</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname6}</td>
+            <td>${bname6}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress6}</td>
+            <td>${baddress6}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity6}</td>
+            <td>${bcity6}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone6}</td>
+            <td>${bphone6}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype6}</td>
+            <td>${btype6}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid7}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 8</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname7}</td>
+            <td>${bname7}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress7}</td>
+            <td>${baddress7}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity7}</td>
+            <td>${bcity7}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone7}</td>
+            <td>${bphone7}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype7}</td>
+            <td>${btype7}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid8}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 9</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname8}</td>
+            <td>${bname8}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress8}</td>
+            <td>${baddress8}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity8}</td>
+            <td>${bcity8}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone8}</td>
+            <td>${bphone8}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype8}</td>
+            <td>${btype8}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>${instanceid9}</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+        <h3>Task 10</h3>
+        <h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>
+<table cellspacing="4" cellpadding="2" border="1">
+    <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td>Restaurant 1</td>
+            <td>Restaurant 2</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>${aname9}</td>
+            <td>${bname9}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>${aaddress9}</td>
+            <td>${baddress9}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>${acity9}</td>
+            <td>${bcity9}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>${aphone9}</td>
+            <td>${bphone9}</td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>${atype9}</td>
+            <td>${btype9}</td>
+        </tr>
+    </tbody>
+</table>
+     ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <SelectionAnswer>
+                <MinSelectionCount>1</MinSelectionCount>
+                <MaxSelectionCount>1</MaxSelectionCount>
+                <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                    <Selection>
+                        <SelectionIdentifier>1</SelectionIdentifier>
+                        <Text>Same</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>0</SelectionIdentifier>
+                        <Text>Different</Text>
+                    </Selection>
+                    <Selection>
+                        <SelectionIdentifier>2</SelectionIdentifier>
+                        <Text>Can not tell</Text>
+                    </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>comments</QuestionIdentifier>
+        <QuestionContent>
+            <Text>Please help us improve this HIT by including any Questions and/or
+                Comments (optional):</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+            <FreeTextAnswer>
+                <NumberOfLinesSuggestion>5</NumberOfLinesSuggestion>
+            </FreeTextAnswer>
+        </AnswerSpecification>
+    </Question>
+</QuestionForm>
