@@ -1,7 +1,6 @@
 from xml.etree import ElementTree
-from xml.etree.ElementTree import Element, SubElement, _escape_cdata
+from xml.etree.ElementTree import Element, SubElement
 from xml.dom import minidom
-import html2text as html2text
 import lxml.etree as etree
 
 
@@ -49,8 +48,8 @@ class InstructionReaderAndXmlGenerator():
             h3String = "<h3>Task {0}</h3>".format(i+1)
             h4String = "<h4>{0}</h4>".format(questionString)
             formattedContentTest = "\n\t\t\t{0}\n\t\t\t{1} {2}".format(h3String, h4String, pretty_xml_as_string)
-            print formattedContentTest
-            formattedContent.text ='<![CDATA[' + formattedContentTest.replace(']]>', ']]]]><![CDATA[>') + ']]>'
+            #print formattedContentTest
+            formattedContent.text ='<![CDATA[' + formattedContentTest.replace(']]>', ']]]]><![CDATA[>') + '\t]]>'
 
             answerSpec = SubElement(question, "AnswerSpecification")
             selectionAns = SubElement(answerSpec, "SelectionAnswer")
@@ -89,6 +88,7 @@ class InstructionReaderAndXmlGenerator():
 
             formattedXmlToWrite = self.escape(pretty_xml_as_string)
 
+
             output_file = open(outputfile, 'w')
             output_file.write(formattedXmlToWrite)
             output_file.close()
@@ -108,7 +108,7 @@ class InstructionReaderAndXmlGenerator():
         str = str.replace("&gt;",">")
         str = str.replace("&amp;","&")
         str = str.replace("&quot;", "\"")
-        #str = str.replace("<?xml version=\"1.0\" ?>","")
+        str = str.replace("<?xml version=\"1.0\" ?>","")
         #str = str.replace("&lt;","")
         return str
 

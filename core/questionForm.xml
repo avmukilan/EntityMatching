@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+
 <QuetionForm name="xmlns=http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
 	<Overview>
 		<FormattedContent><![CDATA[<p>There  are 10 questions in this HIT. For each question, determine if the two restaurants  match (ARE THE SAME) or do not match  (ARE DIFFERENT).</p>
@@ -125,7 +125,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 1</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -170,7 +170,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -211,7 +211,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 2</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -256,7 +256,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -297,7 +297,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 3</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -342,7 +342,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -383,7 +383,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 4</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -428,7 +428,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -469,7 +469,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 5</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -514,7 +514,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -555,7 +555,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 6</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -600,7 +600,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -641,7 +641,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 7</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -686,7 +686,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -727,7 +727,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 8</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -772,7 +772,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -813,7 +813,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 9</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -858,7 +858,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
@@ -899,7 +899,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		<QuestionContent>
 			<FormattedContent><![CDATA[
 			<h3>Task 10</h3>
-			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> <?xml version="1.0" ?>
+			<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4> 
 <table name="cellspacing='4' cellpadding='2' border='1'">
 	<tbody>
 		<tr>
@@ -944,7 +944,7 @@ If you are really confused whether the two restaurants are the same or not, you 
 		</tr>
 	</tbody>
 </table>
-]]></FormattedContent>
+	]]></FormattedContent>
 		</QuestionContent>
 		<AnswerSpecification>
 			<SelectionAnswer>
