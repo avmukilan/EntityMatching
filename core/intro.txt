@@ -1,0 +1,15 @@
+<p>There  are 10 questions in this HIT. For each question, determine if the two restaurants  match (ARE THE SAME) or do not match  (ARE DIFFERENT).</p>
+<p>&nbsp;</p>
+<p><b>PLEASE READ THE GUIDELINES BELOW BEFORE ADVANCING.</b></p>
+<p>You will see two restaurants records. Determine whether the two records represent the same restaurant or not. For each song,  you will see the following attributes:</p>
+<ul>
+    <li>id</li>
+    <li>Name</li>
+    <li>Address</li>
+    <li>City</li>
+    <li>Phone</li>
+    <li>Type</li>
+    <li>Class</li>
+</ul>
+<p>Some of the attributes may be missing for some of the restaurants, try to make a choice based on the information available. <br />
+If you are really confused whether the two restaurants are the same or not, you may choose the third option &quot;<i>Can not tell</i>&quot;</p>

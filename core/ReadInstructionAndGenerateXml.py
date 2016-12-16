@@ -6,23 +6,41 @@ import lxml.etree as etree
 
 class InstructionReaderAndXmlGenerator():
 
+    def createTheOutputFile(self, intro, instr, dataSetName, question, attributes, outputFile, numberOfTests = 10):
+        content = intro + instr
+        self.createTheOutput(dataSetName, question, attributes, content, numberOfTests, outputFile)
+
+    def parseIntroAndInstrAndCreateTheFile(self,introFileName,instrFileName):
+        intro = ""
+        with open(introFileName) as f:
+            for line1 in f:
+                intro = intro + line1
+        instr = ""
+        with open(instrFileName) as f:
+            for line1 in f:
+                instr = instr + line1
+        self.createTheOutputFile(intro,instr,'Restaurant',
+                                 '<h4>Compare the two restaurants &nbsp;and tell us if they are the same or not</h4>'
+                                 ,['Name','Address','City','Phone','Type'],'questionFormFile.xml',10)
+
     def parseAndGenerate(self, overviewFile, outputfile, numberoftests = 10):
         attributes = self.getAttributes(overviewFile)
         questionString = self.getQuestion(overviewFile)
         datasetName = self.getDataSetName(overviewFile)
-
-        root = Element("QuetionForm" , name="xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd")
-        overview = SubElement(root, "Overview")
-        overviewFormattedContent = SubElement(overview, "FormattedContent")
         content = ""
         with open(overviewFile) as f:
             for line1 in f:
                 content = content + line1
+        self.createTheOutput(self, datasetName, questionString, attributes, content, numberoftests, outputfile)
 
+    def createTheOutput(self, datasetName, questionValue, attributes, overviewValue, numberOfTests, outputfile):
+        root = Element("QuetionForm" , name="xmlns=""http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd")
+        overview = SubElement(root, "Overview")
+        overviewFormattedContent = SubElement(overview, "FormattedContent")
         #print content
-        overviewFormattedContent.text =  '<![CDATA[' + content.replace(']]>', ']]]]><![CDATA[>') + ']]>'
+        overviewFormattedContent.text =  '<![CDATA[' + overviewValue.replace(']]>', ']]]]><![CDATA[>') + ']]>'
 
-        for i in range(numberoftests):
+        for i in range(numberOfTests):
             question = SubElement(root, "Question")
             SubElement(question, "QuestionIdentifier").text = "${instanceid{%d}}" % i
             SubElement(question, "IsRequired").text = 'true'
@@ -46,7 +64,7 @@ class InstructionReaderAndXmlGenerator():
             pretty_xml_as_string = xml.toprettyxml()
 
             h3String = "<h3>Task {0}</h3>".format(i+1)
-            h4String = "<h4>{0}</h4>".format(questionString)
+            h4String = "<h4>{0}</h4>".format(questionValue)
             formattedContentTest = "\n\t\t\t{0}\n\t\t\t{1} {2}".format(h3String, h4String, pretty_xml_as_string)
             #print formattedContentTest
             formattedContent.text ='<![CDATA[' + formattedContentTest.replace(']]>', ']]]]><![CDATA[>') + '\t]]>'
@@ -92,7 +110,6 @@ class InstructionReaderAndXmlGenerator():
             output_file = open(outputfile, 'w')
             output_file.write(formattedXmlToWrite)
             output_file.close()
-
 
     def parserTheFile(self, filename):
             print self.getAttributes(filename)
@@ -150,6 +167,7 @@ class InstructionReaderAndXmlGenerator():
 
 
 reader = InstructionReaderAndXmlGenerator()
-reader.parseAndGenerate("sampledata","questionForm.xml")
+reader.parseIntroAndInstrAndCreateTheFile('intro.txt','instruction.txt')
+#reader.parseAndGenerate("sampledata","questionForm.xml")
 #reader.testDataSet("sampledata")
 #reader.printRange(20)
